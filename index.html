@@ -162,13 +162,62 @@
 
 
     <!-- Barra de navegação -->
-<nav>
-    <ul class="nav-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-    </ul>
-</nav>
+/* Estilos para a barra de navegação */
+nav {
+    background-color: transparent; /* Fundo transparente */
+    position: fixed; /* Fixa a navegação no topo */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+    transition: background-color 0.3s ease; /* Transição suave para mudança de cor */
+}
+
+/* Barra de navegação com a classe 'scrolled' */
+nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.7); /* Muda a cor de fundo quando a página rola */
+}
+
+/* Lista de navegação */
+.nav-list {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha verticalmente no centro */
+    list-style: none; /* Remove os pontos da lista */
+    padding: 0; /* Remove o padding da lista */
+    margin: 0; /* Remove a margem da lista */
+}
+
+/* Itens de navegação */
+.nav-list li {
+    margin: 0 30px; /* Espaço entre os itens */
+}
+
+.nav-list a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase; /* Título em maiúsculas */
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de hover para os links */
+.nav-list a:hover {
+    background-color: #4CAF50; /* Cor verde ao passar o mouse */
+    color: white;
+    transform: translateY(-3px); /* Efeito de leve elevação */
+}
+
+/* Link ativo */
+.nav-list a.active {
+    background-color: #2E8B57; /* Cor diferente para o item ativo */
+    color: white;
+}
 
 
     <!-- Seção de boas-vindas -->
